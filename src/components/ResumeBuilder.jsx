@@ -1,6 +1,7 @@
 import PersonalInfoSection from './formPanel/PersonalInfoSection'
 import EducationSection from './formPanel/EducationSection'
 import ExperienceSection from './formPanel/ExperienceSection'
+import SkillsSection from './formPanel/SkillsSection'
 
 function ResumeBuilder() {
     return (
@@ -19,24 +20,7 @@ function ResumeBuilder() {
       {/* Experience */}
       <ExperienceSection />
       {/* Skills */}
-      <div className="form-section collapsed">
-        <div className="section-header" onClick="toggleSection(this)">
-          <h3>
-            <span className="section-icon">⚡</span>Skills
-          </h3>
-          <span className="collapse-icon">▼</span>
-        </div>
-        <div className="section-content">
-          <div className="form-group">
-            <label>Skills (comma separated)</label>
-            <input
-              type="text"
-              id="skills"
-              placeholder="JavaScript, React, Node.js, HTML, CSS"
-            />
-          </div>
-        </div>
-      </div>
+      <SkillsSection />
       {/* Projects */}
       <div className="form-section collapsed">
         <div className="section-header" onClick="toggleSection(this)">
