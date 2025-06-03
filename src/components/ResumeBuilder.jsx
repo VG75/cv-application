@@ -1,3 +1,5 @@
+import PersonalInfoSection from './formPanel/PersonalInfoSection'
+
 function ResumeBuilder() {
     return (
         <div className="container">
@@ -9,7 +11,7 @@ function ResumeBuilder() {
     {/* Left Panel - Form */}
     <div className="form-panel">
       {/* Personal Information */}
-      
+      <PersonalInfoSection />
       {/* Education */}
       <div className="form-section collapsed">
         <div className="section-header" onClick="toggleSection(this)">
