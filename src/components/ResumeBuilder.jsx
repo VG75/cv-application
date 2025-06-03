@@ -1,5 +1,6 @@
 import PersonalInfoSection from './formPanel/PersonalInfoSection'
 import EducationSection from './formPanel/EducationSection'
+import ExperienceSection from './formPanel/ExperienceSection'
 
 function ResumeBuilder() {
     return (
@@ -16,48 +17,7 @@ function ResumeBuilder() {
       {/* Education */}
       <EducationSection />
       {/* Experience */}
-      <div className="form-section collapsed">
-        <div className="section-header" onClick="toggleSection(this)">
-          <h3>
-            <span className="section-icon">💼</span>Professional Experience
-          </h3>
-          <span className="collapse-icon">▼</span>
-        </div>
-        <div className="section-content">
-          <div id="experience-list">
-            <div className="dynamic-section">
-              <div className="form-group">
-                <label>Job Title</label>
-                <input type="text" placeholder="Software Developer" />
-              </div>
-              <div className="form-group">
-                <label>Company</label>
-                <input type="text" placeholder="Company Name" />
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Start Date</label>
-                  <input type="month" />
-                </div>
-                <div className="form-group">
-                  <label>End Date</label>
-                  <input type="month" />
-                </div>
-              </div>
-              <div className="form-group">
-                <label>Description</label>
-                <textarea
-                  placeholder="Describe your responsibilities and achievements..."
-                  defaultValue={""}
-                />
-              </div>
-            </div>
-          </div>
-          <button type="button" className="btn btn-secondary">
-            + Add Experience
-          </button>
-        </div>
-      </div>
+      <ExperienceSection />
       {/* Skills */}
       <div className="form-section collapsed">
         <div className="section-header" onClick="toggleSection(this)">
