@@ -1,4 +1,5 @@
 import PersonalInfoSection from './formPanel/PersonalInfoSection'
+import EducationSection from './formPanel/EducationSection'
 
 function ResumeBuilder() {
     return (
@@ -13,41 +14,7 @@ function ResumeBuilder() {
       {/* Personal Information */}
       <PersonalInfoSection />
       {/* Education */}
-      <div className="form-section collapsed">
-        <div className="section-header" onClick="toggleSection(this)">
-          <h3>
-            <span className="section-icon">🎓</span>Education
-          </h3>
-          <span className="collapse-icon">▼</span>
-        </div>
-        <div className="section-content">
-          <div id="education-list">
-            <div className="dynamic-section">
-              <div className="form-group">
-                <label>Degree</label>
-                <input type="text" placeholder="Bachelor of Science" />
-              </div>
-              <div className="form-group">
-                <label>School/University</label>
-                <input type="text" placeholder="University Name" />
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Start Date</label>
-                  <input type="month" />
-                </div>
-                <div className="form-group">
-                  <label>End Date</label>
-                  <input type="month" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <button type="button" className="btn btn-secondary">
-            + Add Education
-          </button>
-        </div>
-      </div>
+      <EducationSection />
       {/* Experience */}
       <div className="form-section collapsed">
         <div className="section-header" onClick="toggleSection(this)">
