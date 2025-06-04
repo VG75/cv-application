@@ -34,7 +34,7 @@ function SkillsSection({skills, updateSkills}) {
             </div>
             <div className="section-content">
                 <div className="form-group">
-                    <label>Skills (comma separated, Press enter after finishing all skills)</label>
+                    <label>Skills (comma separated, Press enter after finishing all the skills)</label>
                     <input
                         type="text"
                         id="skills"
