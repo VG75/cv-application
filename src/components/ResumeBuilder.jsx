@@ -15,14 +15,60 @@ function ResumeBuilder() {
       location: '',
       summary: ''
     },
-    
-    // You can later add education, experience, etc.
+    experiences: {
+      jobTitle: '',
+      company: '',
+      startDate: '',
+      endDate: '',
+      description: ''
+    },
+    education: {
+      degree: '',
+      school: '',
+      startDate: '',
+      endDate: ''
+    },
+    skills: [],
+    projects: {
+      projectName: '',
+      technologiesUsed: '',
+      description: '',
+      projectURL: ''
+    }
   });
 
   const updatePersonalInfo = (newInfo) => {
     setResumeData((prevData) => ({
       ...prevData,
       personalInfo: newInfo,
+    }));
+  };
+
+  const updateExperience = (newExperience) => {
+    setResumeData((prevData) => ({
+      ...prevData,
+      experiences: newExperience,
+    }));
+  };
+
+  const updateEducation = (newEducation) => {
+    setResumeData((prevData) => ({
+      ...prevData,
+      education: newEducation,
+    }));
+  };
+
+  const updateSkills = (newSkills) => {
+    setResumeData((prevData) => ({
+      ...prevData,
+      skills: newSkills,
+    }));
+  };
+
+  const updateProjects = (newProjects) => {
+    setResumeData((prevData) => ({
+      ...prevData,
+      projects: newProjects,
     }));
   };
 
@@ -41,13 +87,25 @@ function ResumeBuilder() {
                 updatePersonalInfo={updatePersonalInfo}
               />
               {/* Education */}
-              <EducationSection />
+              <EducationSection
+                education={resumeData.education}
+                updateEducation={updateEducation}
+              />
               {/* Experience */}
-              <ExperienceSection />
+              <ExperienceSection
+                experience={resumeData.experience}
+                updateExperience={updateExperience}
+              />
               {/* Skills */}
-              <SkillsSection />
+              <SkillsSection
+                skills={resumeData.skills}
+                updateSkills={updateSkills}
+              />
               {/* Projects */}
-              <ProjectsSection />
+              <ProjectsSection
+                projects={resumeData.projects}
+                updateProjects={updateProjects}
+              />
             </div>
             {/* Right Panel - Preview */}
             <div className="preview-panel">

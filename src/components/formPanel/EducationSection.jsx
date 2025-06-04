@@ -1,13 +1,8 @@
 import { useState } from "react";
 
-function EducationSection() {
+function EducationSection({education, updateEducation}) {
 
-    const [education, setEducation] = useState({
-        degree: '',
-        school: '',
-        startDate: '',
-        endDate: ''
-    });
+    
 
     const [isEducationOpen, setIsEducationOpen] = useState(true);
 
@@ -27,7 +22,8 @@ function EducationSection() {
                 <input 
                 type="text" 
                 placeholder="Bachelor of Science"
-                value={education.degree} />
+                value={education.degree}
+                onChange={(e) => updateEducation({ ...education, degree: e.target.value })} />
               </div>
               <div className="form-group">
                 <label>School/University</label>
@@ -35,7 +31,7 @@ function EducationSection() {
                 type="text" 
                 placeholder="University Name" 
                 value={education.school} 
-                onChange={(e) => setEducation({ ...education, school: e.target.value })} />
+                onChange={(e) => updateEducation({ ...education, school: e.target.value })} />
               </div>
               <div className="form-row">
                 <div className="form-group">
@@ -43,14 +39,14 @@ function EducationSection() {
                   <input 
                   type="month" 
                   value={education.startDate} 
-                  onChange={(e) => setEducation({ ...education, startDate: e.target.value })} />
+                  onChange={(e) => updateEducation({ ...education, startDate: e.target.value })} />
                 </div>
                 <div className="form-group">
                   <label>End Date</label>
                   <input 
                   type="month" 
                   value={education.endDate} 
-                  onChange={(e) => setEducation({ ...education, endDate: e.target.value })} />
+                  onChange={(e) => updateEducation({ ...education, endDate: e.target.value })} />
                 </div>
               </div>
             </div>
