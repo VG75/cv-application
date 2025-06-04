@@ -1,13 +1,8 @@
 import { useState } from "react";
 
-function PersonalInfoSection() {
+function PersonalInfoSection({personalInfo, updatePersonalInfo}) {
 
-    const [personalInfo, setPersonalInfo] = useState({ fullName: '',
-                                                        email: '',
-                                                        phone: '',
-                                                        location: '',
-                                                        summary: ''
-                                                    });
+    
     const [isPersonalOpen, setIsPersonalOpen] = useState(true);
 
     return (
@@ -26,7 +21,7 @@ function PersonalInfoSection() {
               id="fullName"
               placeholder="Enter your full name"
               value={personalInfo.fullName}
-              onChange={(e) => setPersonalInfo({ ...personalInfo, fullName: e.target.value })}
+              onChange={(e) => updatePersonalInfo({ ...personalInfo, fullName: e.target.value })}
             />
           </div>
           <div className="form-group">
@@ -36,7 +31,7 @@ function PersonalInfoSection() {
               id="email"
               placeholder="your.email@example.com"
               value={personalInfo.email}
-              onChange={(e) => setPersonalInfo({ ...personalInfo, email: e.target.value })}
+              onChange={(e) => updatePersonalInfo({ ...personalInfo, email: e.target.value })}
             />
           </div>
           <div className="form-row">
@@ -47,7 +42,7 @@ function PersonalInfoSection() {
                 id="phone"
                 placeholder="+1 (555) 123-4567"
                 value={personalInfo.phone}
-                onChange={(e) => setPersonalInfo({ ...personalInfo, phone: e.target.value })}
+                onChange={(e) => updatePersonalInfo({ ...personalInfo, phone: e.target.value })}
               />
             </div>
             <div className="form-group">
@@ -57,7 +52,7 @@ function PersonalInfoSection() {
                 id="location"
                 placeholder="City, State"
                 value={personalInfo.location}
-                onChange={(e) => setPersonalInfo({ ...personalInfo, location: e.target.value })}
+                onChange={(e) => updatePersonalInfo({ ...personalInfo, location: e.target.value })}
               />
             </div>
           </div>
@@ -67,7 +62,7 @@ function PersonalInfoSection() {
               id="summary"
               placeholder="Brief professional summary..."
               value={personalInfo.summary}
-              onChange={(e) => setPersonalInfo({ ...personalInfo, summary: e.target.value })}
+              onChange={(e) => updatePersonalInfo({ ...personalInfo, summary: e.target.value })}
             />
           </div>
         </div>
