@@ -93,19 +93,13 @@ body {
     gap: 10px;
 }
 
-input,
+/* input,
 textarea,
 select {
-    background-color: white !important;
-    color: #000 !important;
-}
+    
+} */
 
-input[type="date"],
-input[type="month"] {
-  color: #000 !important;
-  background-color: #f8f9fa !important;
-  appearance: auto;
-}
+
 
 .section-icon {
     font-size: 1.2rem;
@@ -156,6 +150,8 @@ input[type="month"] {
     font-size: 13px;
     transition: all 0.3s ease;
     box-sizing: border-box;
+    background-color: white !important;
+    color: #000 !important;
 }
 
 .form-group input:focus,
@@ -329,6 +325,13 @@ input[type="month"] {
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
+}
+
+.resume-body,
+.resume-section,
+.resume-item,
+.resume-item p {
+    text-align: left;
 }
 
 /* Previous Resumes Section */
