@@ -1,12 +1,7 @@
 import {useState} from 'react';
 
-function ProjectsSection() {
-    const [projects, setProjects] = useState({
-        projectName: "",
-        technologiesUsed: "",
-        description: "",
-        projectURL: ""
-    });
+function ProjectsSection({projects, updateProjects}) {
+
     const [isProjectsOpen, setProjectsOpen] = useState(false);
     return(
         <div className={`form-section ${isProjectsOpen ? '' : 'collapsed'}`}>
@@ -25,7 +20,7 @@ function ProjectsSection() {
                   type="text" 
                   placeholder="E-commerce Website"
                   value={projects.projectName}
-                  onChange={(e) => setProjects({ ...projects, projectName: e.target.value })}
+                  onChange={(e) => updateProjects({ ...projects, projectName: e.target.value })}
                   />
                 </div>
                 <div className="form-group">
@@ -34,7 +29,7 @@ function ProjectsSection() {
                   type="text" 
                   placeholder="React, Node.js, MongoDB"
                   value={projects.technologiesUsed}
-                  onChange={(e) => setProjects({ ...projects, technologiesUsed: e.target.value })}
+                  onChange={(e) => updateProjects({ ...projects, technologiesUsed: e.target.value })}
                   />
                 </div>
                 <div className="form-group">
@@ -42,9 +37,9 @@ function ProjectsSection() {
                   <textarea
                     placeholder="Describe the project..."
                     defaultValue={projects.description}
-                    onChange={(e) => setProjects({ ...projects, description: e.target.value })}
+                    onChange={(e) => updateProjects({ ...projects, description: e.target.value })}
                   />
-                  
+
                 </div>
                 <div className="form-group">
                   <label>Project URL (optional)</label>
@@ -52,7 +47,7 @@ function ProjectsSection() {
                     type="url"
                     placeholder="https://github.com/username/project"
                     value={projects.projectURL}
-                    onChange={(e) => setProjects({ ...projects, projectURL: e.target.value })}
+                    onChange={(e) => updateProjects({ ...projects, projectURL: e.target.value })}
                   />
                 </div>
               </div>

@@ -51,6 +51,7 @@ function ResumeBuilder() {
     }));
   };
 
+
   const updateEducation = (newEducation) => {
     setResumeData((prevData) => ({
       ...prevData,
@@ -58,12 +59,12 @@ function ResumeBuilder() {
     }));
   };
 
-  const updateSkills = (newSkills) => {
+  const updateSkills = (skillsArray) => {
     setResumeData((prevData) => ({
       ...prevData,
-      skills: newSkills,
+      skills: skillsArray,
     }));
-  };
+};
 
   const updateProjects = (newProjects) => {
     setResumeData((prevData) => ({
@@ -93,7 +94,7 @@ function ResumeBuilder() {
               />
               {/* Experience */}
               <ExperienceSection
-                experience={resumeData.experience}
+                experiences={resumeData.experiences}
                 updateExperience={updateExperience}
               />
               {/* Skills */}
